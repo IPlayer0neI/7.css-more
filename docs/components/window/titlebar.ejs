@@ -27,51 +27,49 @@
       <code>title-bar</code>, <code>title-bar-text</code>, and <code>title-bar-controls</code>.
     </p>
 
-    <%- example(`
-      <div class="title-bar">
-        <div class="title-bar-text">A Title Bar</div>
-        <div class="title-bar-controls">
-          <button aria-label="Close"></button>
-        </div>
+    <%- example(` <div class="title-bar">
+      <div class="title-bar-text">A Title Bar</div>
+      <div class="title-bar-controls">
+        <button aria-label="Close"></button>
       </div>
-    `) %>
+  </div>
+  `) %>
 
-    <p>
-      We make use of <code>aria-label</code> to render the Close button, to let
-      assistive technologies know the intent of this button. You may also use
-      "Minimize", "Maximize", "Restore" and "Help" like so:
-    </p>
+  <p>
+    We make use of <code>aria-label</code> to render the Close button, to let
+    assistive technologies know the intent of this button. You may also use
+    "Minimize", "Maximize", "Restore" and "Help" like so:
+  </p>
 
-    <%- example(`
-      <div class="title-bar">
-        <div class="title-bar-text">A Title Bar</div>
-        <div class="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Maximize"></button>
-          <button aria-label="Close"></button>
-        </div>
+  <%- example(` <div class="title-bar">
+    <div class="title-bar-text">A Title Bar</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+    </div>
+
+    <br>
+
+    <div class="title-bar">
+      <div class="title-bar-text">A maximized Title Bar</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Restore"></button>
+        <button aria-label="Close"></button>
       </div>
+    </div>
 
-      <br>
+    <br>
 
-      <div class="title-bar">
-        <div class="title-bar-text">A maximized Title Bar</div>
-        <div class="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Restore"></button>
-          <button aria-label="Close"></button>
-        </div>
+    <div class="title-bar">
+      <div class="title-bar-text">A help Title Bar</div>
+      <div class="title-bar-controls">
+        <button aria-label="Help"></button>
+        <button aria-label="Close"></button>
       </div>
-
-      <br>
-
-      <div class="title-bar">
-        <div class="title-bar-text">A help Title Bar</div>
-        <div class="title-bar-controls">
-          <button aria-label="Help"></button>
-          <button aria-label="Close"></button>
-        </div>
-      </div>
+    </div>
     `) %>
 
     <p>
@@ -86,26 +84,24 @@
       a width in the container style.
     </p>
 
-    <%- example(`
-      <div class="window" style="max-width: 300px">
-        <div class="title-bar">
-          <div class="title-bar-text">A complete window</div>
-          <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
-          </div>
+    <%- example(` <div class="window" style="max-width: 300px">
+      <div class="title-bar">
+        <div class="title-bar-text">A complete window</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
         </div>
       </div>
-    `) %>
+      </div>
+      `) %>
 
-    <p>
-      Place an <code>active</code> class either on the <code>window</code> container or
-      the title bar itself to enable the active styles for the controls.
-    </p>
+      <p>
+        Place an <code>active</code> class either on the <code>window</code> container or
+        the title bar itself to enable the active styles for the controls.
+      </p>
 
-    <%- example(`
-      <div class="window active" style="max-width: 300px">
+      <%- example(` <div class="window active" style="max-width: 300px">
         <div class="title-bar">
           <div class="title-bar-text">A complete window</div>
           <div class="title-bar-controls">
@@ -114,7 +110,46 @@
             <button aria-label="Close"></button>
           </div>
         </div>
-      </div>
-    `) %>
-  </div>
+        </div>
+        `) %>
+        <p>
+          Use location bar:
+        </p>
+
+        <%-example(` <div class="title-bar">
+          <div class="title-bar-text">
+            My First Program
+          </div>
+
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+          <!-- Added html -->
+          <div class="location-bar">
+            <div class="navigation">
+              <div class="navigation-left"></div>
+              <div class="navigation-right"></div>
+            </div>
+            <div class="location">
+              <div class="location-path">
+                Desktop
+                <div class="location-path-arrow">
+                </div>
+              </div>
+              <div class="location-path-final">
+                <div class="location-path-arrow">
+                </div>
+
+                <div class="refresh-arrow">
+                </div>
+              </div>
+            </div>
+            <input class="location-search" placeholder="Search" />
+          </div>
+          <!-- Final Added html -->
+          </div>
+          `) -%>
+          </div>
 </section>
