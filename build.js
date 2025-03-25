@@ -15,7 +15,7 @@ const plugins = [
   require("postcss-calc"),
   require("postcss-base64")({
     root: process.cwd() + "/gui",
-    extensions: [".png", ".svg", ".gif"],
+    extensions: [".png", ".svg", ".gif", ".webp"],
   }),
 ];
 
